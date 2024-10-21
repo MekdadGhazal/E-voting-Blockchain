@@ -1,67 +1,83 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# E-voting Blockchain
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+E-voting Blockchain is a decentralized voting application built on blockchain technology. This project aims to provide a secure, transparent, and tamper-proof platform for conducting elections. Leveraging blockchain ensures that votes are immutable and verifiable, making the system resistant to fraud and manipulation.
 
-## About Laravel
+## Key Features
+- **Blockchain-based Voting**: Ensures votes are stored on a decentralized ledger for transparency.
+- **Security**: Each vote is encrypted, ensuring confidentiality and integrity.
+- **Transparency**: The blockchain ledger is accessible and verifiable by all participants, preventing vote tampering.
+- **Anonymity**: Ensures the voter's identity is kept confidential.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Prerequisites
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Before running this project, ensure you have the following installed:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- [Node.js](https://nodejs.org/) v14.x or later
+- [Laravel](https://laravel.com/) Framework v8.x
+- [Composer](https://getcomposer.org/) v2.x or later
+- [MySQL](https://www.mysql.com/) Database
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Follow these steps to set up and run the project locally:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. **Clone the repository:**
+   git clone https://github.com/MekdadGhazal/E-voting-Blockchain.git
+   cd E-voting-Blockchain
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. **Install dependencies:**
+2.1Backend (Laravel) Dependencies:
+composer install
 
-## Laravel Sponsors
+2.2Frontend (Node.js) Dependencies:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+npm install
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+3. ** Set up Environment Variables: ** Copy the ".env.example" file to ".env":
+cp .env.example .env
 
-## Contributing
+Then update the .env file with your database credentials and other configurations:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+4. **Generate application key:**
+php artisan key:generate
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Run database migrations:**
 
-## Security Vulnerabilities
+php artisan migrate
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Serve the Application: Run the Laravel server:**
+php artisan serve
 
-## License
+The application will be available at: http://localhost:8000
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# E-voting-Blockchain" 
+
+Running the Blockchain Network
+Set up the blockchain network: Make sure the blockchain node is running, and that the necessary blockchain smart contracts are deployed.
+
+Interact with the blockchain:
+
+Use the front end to cast votes.
+Each vote is recorded in the blockchain ledger.
+Monitor blockchain transactions: You can view blockchain transactions using tools like Ganache or MetaMask to ensure the integrity of the voting process.
+
+
+Usage
+Casting a Vote: Users can log in and securely cast their votes.
+Blockchain Ledger: Votes are written to the blockchain, ensuring they cannot be altered or deleted.
+Election Results: Results are available after the voting period ends and can be publicly verified on the blockchain.
+Contributing
+If you would like to contribute to the project, please fork the repository and submit a pull request. Make sure to follow the coding guidelines and write relevant tests for your changes.
+
+License:
+### Additional Customizations
+If there are specific blockchain platforms (e.g., Ethereum, Hyperledger) or frameworks used for the smart contracts, we can add those details.
+
+You can replace placeholder sections like `your_database`, `your_username`, etc., with the actual project details.
